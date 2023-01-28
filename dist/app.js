@@ -1,4 +1,4 @@
-import { checkAround } from './checkAroundFunction.js';
+import { checkAround } from './checkAround.js';
 const linesQuantities = 5;
 const columnsQuantities = 5;
 const cells = [
