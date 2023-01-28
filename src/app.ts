@@ -13,16 +13,6 @@ const cells: number[][] = [
 
 console.table(cells);
 
-//checkAroundBorder(cells, columnsQuantities, linesQuantities);
 const cellChanged = checkAround(cells, columnsQuantities, linesQuantities);
 
 console.table(cellChanged);
-
-// Pruebas:
-
-const arrayTest = [
-  [1, 1, 1],
-  [1, 1, 0],
-  [0, 0, 0],
-];
-console.table(checkAround(arrayTest, 3, 3));

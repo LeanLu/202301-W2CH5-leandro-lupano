@@ -18,7 +18,7 @@ Si tiene 2 o 3 células contiguas vivas, sobrevive.
 Una célula muerta sigue la siguiente regla:
 Permanece muerta hasta que tiene exactamente 3 células contiguas vivas, momento en el que "nace".
 
-### Requisitos
+### Requisitos:
 
 1- Si es posible, y puedes testear, usa TS.
 
@@ -38,7 +38,7 @@ Permanece muerta hasta que tiene exactamente 3 células contiguas vivas, momento
 
 - 7.2. Se debe desplegar a Netlify.
 
-### Milestones
+### Milestones:
 
 1- Programa funcional en JS. Las células se quedan pegadas la pared.
 
