@@ -1,12 +1,14 @@
-import { checkAroundNoBorder } from './checkAroundFunction.js';
-const linesQuantities = 3;
-const columnsQuantities = 3;
+import { checkAround } from './checkAroundFunction.js';
+const linesQuantities = 5;
+const columnsQuantities = 5;
 const cells = [
-    [0, 1, 0],
-    [0, 1, 1],
-    [0, 1, 1],
+    [0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [0, 0, 1, 1, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
 ];
 console.table(cells);
 //checkAroundBorder(cells, columnsQuantities, linesQuantities);
-checkAroundNoBorder(cells, columnsQuantities, linesQuantities);
+checkAround(cells, columnsQuantities, linesQuantities);
 console.table(cells);
