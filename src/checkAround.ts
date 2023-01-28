@@ -19,4 +19,6 @@ export const checkAround = (
       changeOfStatus(x, y, array, quantityOfAlive);
     }
   }
+
+  return array;
 };

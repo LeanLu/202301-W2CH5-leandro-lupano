@@ -1,4 +1,4 @@
-import { checkAround } from './checkAroundFunction.js';
+import { checkAround } from './checkAround.js';
 
 const linesQuantities: number = 5;
 const columnsQuantities: number = 5;
@@ -14,6 +14,15 @@ const cells: number[][] = [
 console.table(cells);
 
 //checkAroundBorder(cells, columnsQuantities, linesQuantities);
-checkAround(cells, columnsQuantities, linesQuantities);
+const cellChanged = checkAround(cells, columnsQuantities, linesQuantities);
 
-console.table(cells);
+console.table(cellChanged);
+
+// Pruebas:
+
+const arrayTest = [
+  [1, 1, 1],
+  [1, 1, 0],
+  [0, 0, 0],
+];
+console.table(checkAround(arrayTest, 3, 3));
