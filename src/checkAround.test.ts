@@ -19,18 +19,18 @@ describe('Given checkAround function', () => {
       expect(result).toEqual(expected);
     });
 
-    test('Then the cells died with value 0 of the array has to change to 1 if there is 2 or 3 alive cells around', () => {
+    test('Then the cells died with value 0 of the array has to change to 1 if there is exactly 3 alive cells around', () => {
       const arrayTest = [
         [0, 1, 0],
-        [1, 0, 0],
+        [1, 1, 0],
         [0, 0, 0],
       ];
       const columnsQuantities = 3;
       const linesQuantities = 3;
       const expected = [
         [1, 1, 0],
-        [1, 1, 1],
-        [1, 0, 1],
+        [1, 1, 0],
+        [0, 0, 0],
       ];
       const result = checkAround(arrayTest, columnsQuantities, linesQuantities);
       expect(result).toEqual(expected);
@@ -47,7 +47,7 @@ describe('Given checkAround function', () => {
       const expected = [
         [1, 0, 0],
         [1, 1, 0],
-        [1, 1, 1],
+        [0, 0, 0],
       ];
       const result = checkAround(arrayTest, columnsQuantities, linesQuantities);
       expect(result).toEqual(expected);

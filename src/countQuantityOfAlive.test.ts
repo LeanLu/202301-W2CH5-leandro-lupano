@@ -275,4 +275,17 @@ describe('Given countQuantityOfAlive function', () => {
     const result = f.countQuantityOfAliveBorder4(x, y, arrayTest);
     expect(result).toEqual(expected);
   });
+
+  test('Then if Q = 0, the position is x=1, y=2, and array[y-1][x+1]= 1, Q should change to 1', () => {
+    const arrayTest = [
+      [0, 0, 0],
+      [0, 0, 1],
+      [0, 1, 0],
+    ];
+    const x = 1;
+    const y = 2;
+    const expected = 1;
+    const result = f.countQuantityOfAliveBorder4(x, y, arrayTest);
+    expect(result).toEqual(expected);
+  });
 });
