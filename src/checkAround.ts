@@ -23,5 +23,7 @@ export const checkAround = (
     }
   }
 
-  return newCellsArray;
+  array = newCellsArray;
+
+  return array;
 };
