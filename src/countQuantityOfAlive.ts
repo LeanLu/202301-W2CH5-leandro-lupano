@@ -101,6 +101,10 @@ export const countQuantityOfAliveBorder1 = (
 
   if (array[y + 1][x] === 1) quantityOfAlive++;
 
+  if (array[y - 1][x + 1] === 1) quantityOfAlive++;
+
+  if (array[y + 1][x + 1] === 1) quantityOfAlive++;
+
   return quantityOfAlive;
 };
 
@@ -117,6 +121,10 @@ export const countQuantityOfAliveBorder2 = (
 
   if (array[y + 1][x] === 1) quantityOfAlive++;
 
+  if (array[y - 1][x - 1] === 1) quantityOfAlive++;
+
+  if (array[y + 1][x - 1] === 1) quantityOfAlive++;
+
   return quantityOfAlive;
 };
 
@@ -129,9 +137,13 @@ export const countQuantityOfAliveBorder3 = (
 
   if (array[y][x - 1] === 1) quantityOfAlive++;
 
-  if (array[y + 1][x + 1] === 1) quantityOfAlive++;
+  if (array[y + 1][x] === 1) quantityOfAlive++;
 
   if (array[y][x + 1] === 1) quantityOfAlive++;
+
+  if (array[y + 1][x - 1] === 1) quantityOfAlive++;
+
+  if (array[y + 1][x + 1] === 1) quantityOfAlive++;
 
   return quantityOfAlive;
 };
@@ -148,6 +160,10 @@ export const countQuantityOfAliveBorder4 = (
   if (array[y - 1][x] === 1) quantityOfAlive++;
 
   if (array[y][x + 1] === 1) quantityOfAlive++;
+
+  if (array[y - 1][x - 1] === 1) quantityOfAlive++;
+
+  if (array[y - 1][x + 1] === 1) quantityOfAlive++;
 
   return quantityOfAlive;
 };
