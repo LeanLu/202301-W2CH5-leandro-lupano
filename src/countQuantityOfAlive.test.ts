@@ -55,6 +55,19 @@ describe('Given countQuantityOfAlive function', () => {
     expect(result).toEqual(expected);
   });
 
+  test('Then if Q = 0, the position is x=1, y=1, and array[y-1][x+1]= 1, Q should change to 1', () => {
+    const arrayTest = [
+      [0, 0, 1],
+      [0, 1, 0],
+      [0, 0, 0],
+    ];
+    const x = 1;
+    const y = 1;
+    const expected = 1;
+    const result = f.countQuantityOfAlive(x, y, arrayTest);
+    expect(result).toEqual(expected);
+  });
+
   test('Then if Q = 0, the position is x=2, y=0, and array[y+1][x]= 1, Q should change to 1', () => {
     const arrayTest = [
       [0, 0, 1],
@@ -146,6 +159,19 @@ describe('Given countQuantityOfAlive function', () => {
     expect(result).toEqual(expected);
   });
 
+  test('Then if Q = 0, the position is x=0, y=1, and array[y+1][x+1]= 1, Q should change to 1', () => {
+    const arrayTest = [
+      [0, 0, 0],
+      [1, 0, 0],
+      [0, 1, 0],
+    ];
+    const x = 0;
+    const y = 1;
+    const expected = 1;
+    const result = f.countQuantityOfAliveBorder1(x, y, arrayTest);
+    expect(result).toEqual(expected);
+  });
+
   test('Then if Q = 0, the position is x=2, y=1, and array[y][x-1]= 1, Q should change to 1', () => {
     const arrayTest = [
       [0, 0, 0],
@@ -164,6 +190,32 @@ describe('Given countQuantityOfAlive function', () => {
       [0, 0, 0],
       [0, 0, 1],
       [0, 0, 1],
+    ];
+    const x = 2;
+    const y = 1;
+    const expected = 1;
+    const result = f.countQuantityOfAliveBorder2(x, y, arrayTest);
+    expect(result).toEqual(expected);
+  });
+
+  test('Then if Q = 0, the position is x=2, y=1, and array[y-1][x]= 1, Q should change to 1', () => {
+    const arrayTest = [
+      [0, 0, 1],
+      [0, 0, 1],
+      [0, 0, 0],
+    ];
+    const x = 2;
+    const y = 1;
+    const expected = 1;
+    const result = f.countQuantityOfAliveBorder2(x, y, arrayTest);
+    expect(result).toEqual(expected);
+  });
+
+  test('Then if Q = 0, the position is x=2, y=1, and array[y+1][x-1]= 1, Q should change to 1', () => {
+    const arrayTest = [
+      [0, 0, 0],
+      [0, 0, 1],
+      [0, 1, 0],
     ];
     const x = 2;
     const y = 1;
