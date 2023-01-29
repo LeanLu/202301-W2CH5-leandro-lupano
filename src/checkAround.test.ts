@@ -45,8 +45,8 @@ describe('Given checkAround function', () => {
       const columnsQuantities = 3;
       const linesQuantities = 3;
       const expected = [
-        [1, 0, 0],
-        [1, 1, 0],
+        [1, 0, 1],
+        [1, 0, 1],
         [0, 0, 0],
       ];
       const result = checkAround(arrayTest, columnsQuantities, linesQuantities);
