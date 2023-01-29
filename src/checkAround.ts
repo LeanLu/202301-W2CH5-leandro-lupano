@@ -1,5 +1,6 @@
 import { changeOfStatus } from './changeOfStatus.js';
 import { checkPosition } from './checkPosition.js';
+import { createNewArray } from './createNewArray.js';
 
 // Función para chequear status cuando la célula no está en el borde:
 export const checkAround = (
@@ -7,6 +8,8 @@ export const checkAround = (
   columnsQuantities: number,
   linesQuantities: number
 ) => {
+  const newCellsArray = createNewArray(columnsQuantities, linesQuantities);
+
   for (let i = 0; i < linesQuantities; i++) {
     for (let j = 0; j < columnsQuantities; j++) {
       const x = j;
@@ -16,9 +19,9 @@ export const checkAround = (
 
       const quantityOfAlive = checkPosition(x, y, array, xMax, yMax);
 
-      changeOfStatus(x, y, array, quantityOfAlive);
+      changeOfStatus(x, y, array, quantityOfAlive, newCellsArray);
     }
   }
 
-  return array;
+  return newCellsArray;
 };
